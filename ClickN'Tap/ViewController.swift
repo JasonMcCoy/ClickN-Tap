@@ -10,16 +10,37 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+    // This is the logo on the first screen
+    @IBOutlet weak var tapperLogo: UIImageView!
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // Label that says "How many clicks to win!?"
+    @IBOutlet weak var labelOnHomeScreen: UITextField!
+    
+    // Play Button on the first screen
+    @IBOutlet weak var playButtonOnHomeScreen: UIButton!
+    
+    // COIN Button on second screen
+    @IBOutlet weak var coinButtonOnSecondScreen: UIButton!
+    
+    // Shows the current amount of clicks on the second screen
+    @IBOutlet weak var clickCounterOnSecondScreen: UILabel!
+    
+    
+    // Play Button on the first screen FUNCTION
+    @IBAction func playButtonOnHomeScreenAction(sender: AnyObject) {
+        tapperLogo.hidden = true
+        labelOnHomeScreen.hidden = true
+        playButtonOnHomeScreen.hidden = true
+        
+        coinButtonOnSecondScreen.hidden = false
+        clickCounterOnSecondScreen.hidden = false
     }
-
+    
+    // COIN Button on second screen FUNCTION
+    @IBAction func coinButtonOnSecondScreenAction(sender: AnyObject) {
+        
+    }
+    
 
 }
 
